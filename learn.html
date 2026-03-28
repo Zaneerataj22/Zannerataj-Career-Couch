@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learn – Software Developer Path | Zaneera Taj</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="extras.css"/>
+  <link rel="stylesheet" href="learn.css"/>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">ZT.</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="learn.html" style="color:var(--accent)">📚 Learn</a></li>
+    <li><a href="index.html#interview">Interview Prep</a></li>
+    <li><a href="tracker.html">Job Tracker</a></li>
+    <li><a href="mock.html">Mock Test</a></li>
+  </ul>
+  <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+</nav>
+
+<div class="learn-hero">
+  <div>
+    <div class="hero-tag">📚 Free Learning Hub</div>
+    <h1>Learn <span>Software Development</span></h1>
+    <p>Everything a Software Developer needs — explained simply with examples, code, and visuals. Start from zero, reach job-ready level. 🚀</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1rem">
+      <div style="background:rgba(16,185,129,0.1);border:1px solid var(--green);border-radius:8px;padding:0.5rem 1rem;font-size:0.85rem;color:var(--green)">✅ 12 Topics</div>
+      <div style="background:rgba(124,58,237,0.1);border:1px solid var(--accent);border-radius:8px;padding:0.5rem 1rem;font-size:0.85rem;color:var(--accent)">🎯 Job-Focused</div>
+      <div style="background:rgba(6,182,212,0.1);border:1px solid var(--accent2);border-radius:8px;padding:0.5rem 1rem;font-size:0.85rem;color:var(--accent2)">💡 With Code Examples</div>
+    </div>
+  </div>
+</div>
+
+<div class="learn-wrap">
+  <div class="topic-search">
+    <input type="text" id="topicSearch" placeholder="🔍 Search topics... (HTML, Python, SQL, React...)" oninput="filterTopics()"/>
+  </div>
+  <div class="topic-filter-row">
+    <button class="tf-btn active" data-level="all" onclick="setLevel(this)">All Topics</button>
+    <button class="tf-btn" data-level="beginner" onclick="setLevel(this)">🟢 Beginner</button>
+    <button class="tf-btn" data-level="intermediate" onclick="setLevel(this)">🟡 Intermediate</button>
+    <button class="tf-btn" data-level="advanced" onclick="setLevel(this)">🔴 Advanced</button>
+  </div>
+  <div class="topics-grid" id="topicsGrid"></div>
+</div>
+
+<!-- LESSON MODAL -->
+<div class="lesson-overlay" id="lessonOverlay" onclick="closeLessonOutside(event)">
+  <div class="lesson-modal" id="lessonModal">
+    <div class="lesson-modal-header">
+      <h2 id="lessonTitle">Topic</h2>
+      <button class="lesson-close" onclick="closeLesson()">✕</button>
+    </div>
+    <div class="lesson-body" id="lessonBody"></div>
+  </div>
+</div>
+
+<footer>
+  <p>Built with ❤️ · Zaneera Taj © 2026 · Software Developer · Bangalore</p>
+</footer>
+
+<script src="extras.js"></script>
+<script src="learn.js"></script>
+</body>
+</html>

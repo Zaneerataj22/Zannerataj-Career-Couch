@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Tracker & Roadmap – Zaneera Taj</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="extras.css"/>
+  <link rel="stylesheet" href="tracker.css"/>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">ZT.</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#interview">Interview Prep</a></li>
+    <li><a href="tracker.html#roadmap" style="color:var(--accent)">Roadmap</a></li>
+    <li><a href="tracker.html#tracker" style="color:var(--accent)">Job Tracker</a></li>
+    <li><a href="mock.html">Mock Test</a></li>
+  </ul>
+  <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div>
+    <div class="hero-tag">📍 Your Personal Career Dashboard</div>
+    <h1>Roadmap & <span>Job Tracker</span></h1>
+    <p>Track your progress, apply smart, stay motivated 💪</p>
+    <div style="margin-top:1.5rem">
+      <button class="btn btn-outline" id="notifBtn" onclick="requestNotifPermission()" style="border-color:var(--yellow);color:var(--yellow);font-size:0.9rem">🔕 Enable Daily Notifications</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== VISUAL ROADMAP ===== -->
+<section id="roadmap">
+  <div style="max-width:900px;margin:0 auto;padding:3rem 2rem 1rem">
+    <h2 class="section-title">Your Career <span>Roadmap</span></h2>
+    <p class="section-sub">Based on your resume — where you are & where to go next</p>
+  </div>
+  <div class="roadmap-visual">
+
+    <div class="rm-phase">
+      <div class="rm-dot done">✅</div>
+      <div class="rm-content done">
+        <div class="rm-header">
+          <span class="rm-title">Phase 1 — Foundation (Done ✓)</span>
+          <span class="rm-badge done">Completed</span>
+        </div>
+        <div class="rm-skills">
+          <span class="rm-skill done">HTML & CSS</span>
+          <span class="rm-skill done">JavaScript</span>
+          <span class="rm-skill done">Python</span>
+          <span class="rm-skill done">SQL / MySQL</span>
+          <span class="rm-skill done">Git & GitHub</span>
+          <span class="rm-skill done">Linux Basics</span>
+        </div>
+        <div class="rm-progress-wrap"><div class="rm-progress-fill" style="width:100%;background:var(--green)"></div></div>
+        <div class="rm-tip">💡 You have all foundation skills from your training and projects.</div>
+      </div>
+    </div>
+
+    <div class="rm-phase">
+      <div class="rm-dot done">✅</div>
+      <div class="rm-content done">
+        <div class="rm-header">
+          <span class="rm-title">Phase 2 — Real Work Experience (Done ✓)</span>
+          <span class="rm-badge done">Completed</span>
+        </div>
+        <div class="rm-skills">
+          <span class="rm-skill done">REST APIs</span>
+          <span class="rm-skill done">API Testing (Postman)</span>
+          <span class="rm-skill done">Production Support</span>
+          <span class="rm-skill done">Log Analysis</span>
+          <span class="rm-skill done">Incident Handling</span>
+          <span class="rm-skill done">React.js Projects</span>
+          <span class="rm-skill done">ERP Systems</span>
+        </div>
+        <div class="rm-progress-wrap"><div class="rm-progress-fill" style="width:100%;background:var(--green)"></div></div>
+        <div class="rm-tip">💡 1.5+ years at ReSource Pro & Future Tech Education — strong real-world base.</div>
+      </div>
+    </div>
+
+    <div class="rm-phase">
+      <div class="rm-dot current">🔥</div>
+      <div class="rm-content current">
+        <div class="rm-header">
+          <span class="rm-title">Phase 3 — Job Search & Interview Prep (Current)</span>
+          <span class="rm-badge current">In Progress</span>
+        </div>
+        <div class="rm-skills">
+          <span class="rm-skill">Interview Practice</span>
+          <span class="rm-skill">Mock Tests</span>
+          <span class="rm-skill">Resume Optimization</span>
+          <span class="rm-skill">LinkedIn Profile</span>
+          <span class="rm-skill">Apply to 5+ jobs/day</span>
+          <span class="rm-skill">Network actively</span>
+        </div>
+        <div class="rm-progress-wrap"><div class="rm-progress-fill" id="phase3Progress" style="width:40%"></div></div>
+        <div class="rm-tip">🎯 You are HERE. Focus: daily practice + consistent applications + follow-ups.</div>
+      </div>
+    </div>
+
+    <div class="rm-phase">
+      <div class="rm-dot todo">🎯</div>
+      <div class="rm-content todo">
+        <div class="rm-header">
+          <span class="rm-title">Phase 4 — Land the Job (Next)</span>
+          <span class="rm-badge todo">Upcoming</span>
+        </div>
+        <div class="rm-skills">
+          <span class="rm-skill todo">HR Round Clear</span>
+          <span class="rm-skill todo">Technical Round Clear</span>
+          <span class="rm-skill todo">Offer Negotiation</span>
+          <span class="rm-skill todo">Onboarding</span>
+        </div>
+        <div class="rm-progress-wrap"><div class="rm-progress-fill" style="width:0%"></div></div>
+        <div class="rm-tip">💡 Use the Salary Guide + Self Intro sections to prepare for this phase.</div>
+      </div>
+    </div>
+
+    <div class="rm-phase">
+      <div class="rm-dot todo">🚀</div>
+      <div class="rm-content todo">
+        <div class="rm-header">
+          <span class="rm-title">Phase 5 — Level Up (Future)</span>
+          <span class="rm-badge todo">Future Goal</span>
+        </div>
+        <div class="rm-skills">
+          <span class="rm-skill todo">System Design</span>
+          <span class="rm-skill todo">Cloud (AWS/Azure)</span>
+          <span class="rm-skill todo">Docker & CI/CD</span>
+          <span class="rm-skill todo">Senior Developer</span>
+          <span class="rm-skill todo">Team Lead</span>
+        </div>
+        <div class="rm-progress-wrap"><div class="rm-progress-fill" style="width:0%"></div></div>
+        <div class="rm-tip">💡 After landing the job — focus on these to grow to senior level in 2-3 years.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== JOB TRACKER ===== -->
+<section id="tracker">
+  <div class="tracker-wrap">
+    <h2 class="section-title">Job <span>Application Tracker</span></h2>
+    <p class="section-sub">Track every company you apply to — never lose track again</p>
+
+    <!-- STATS -->
+    <div class="tracker-stats">
+      <div class="tstat applied"><div class="tnum" id="statTotal">0</div><div class="tlbl">📤 Total Applied</div></div>
+      <div class="tstat replied"><div class="tnum" id="statReplied">0</div><div class="tlbl">💬 Got Reply</div></div>
+      <div class="tstat interview"><div class="tnum" id="statInterview">0</div><div class="tlbl">🎯 Interviews</div></div>
+      <div class="tstat rejected"><div class="tnum" id="statRejected">0</div><div class="tlbl">❌ Rejected</div></div>
+      <div class="tstat pending"><div class="tnum" id="statPending">0</div><div class="tlbl">⏳ No Response</div></div>
+    </div>
+
+    <!-- ADD FORM -->
+    <div class="add-job-form">
+      <h3>➕ Add New Application</h3>
+      <div class="form-grid">
+        <input type="text" id="jobCompany" placeholder="Company Name *" />
+        <input type="text" id="jobRole" placeholder="Job Role / Position *" />
+        <input type="date" id="jobDate" />
+        <select id="jobStatus">
+          <option value="applied">📤 Applied</option>
+          <option value="replied">💬 Got Reply</option>
+          <option value="interview">🎯 Interview Scheduled</option>
+          <option value="rejected">❌ Rejected</option>
+          <option value="offer">🎉 Got Offer!</option>
+          <option value="pending">⏳ No Response</option>
+        </select>
+        <input type="text" id="jobSource" placeholder="Source (LinkedIn, Naukri...)" />
+        <input type="text" id="jobNote" placeholder="Notes (optional)" />
+      </div>
+      <button class="btn btn-primary" onclick="addJob()">Add Application</button>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="job-filters">
+      <button class="filter-btn active" data-filter="all" onclick="filterJobs(this)">All</button>
+      <button class="filter-btn" data-filter="applied" onclick="filterJobs(this)">📤 Applied</button>
+      <button class="filter-btn" data-filter="replied" onclick="filterJobs(this)">💬 Replied</button>
+      <button class="filter-btn" data-filter="interview" onclick="filterJobs(this)">🎯 Interview</button>
+      <button class="filter-btn" data-filter="rejected" onclick="filterJobs(this)">❌ Rejected</button>
+      <button class="filter-btn" data-filter="offer" onclick="filterJobs(this)">🎉 Offer</button>
+      <button class="filter-btn" data-filter="pending" onclick="filterJobs(this)">⏳ No Response</button>
+    </div>
+
+    <div class="job-list" id="jobList"></div>
+
+    <!-- MOTIVATION SECTION -->
+    <div class="motivation-section" id="motivation">
+      <h2>Stay <span>Motivated</span> 💪</h2>
+      <p>No response? Rejection? That's part of the journey. Keep going.</p>
+
+      <div class="quote-display">
+        <span class="quote-mark">"</span>
+        <div class="quote-text" id="quoteText">Loading...</div>
+        <div class="quote-author" id="quoteAuthor"></div>
+        <div class="quote-nav">
+          <button class="btn btn-outline" style="font-size:0.85rem" onclick="prevQuote()">← Prev</button>
+          <button class="btn btn-primary" style="font-size:0.85rem" onclick="nextQuote()">Next →</button>
+          <button class="btn btn-outline" style="font-size:0.85rem;border-color:var(--yellow);color:var(--yellow)" onclick="randomQuote()">🎲 Random</button>
+        </div>
+      </div>
+
+      <div class="quote-grid" id="quoteGrid"></div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>Built with ❤️ · Zaneera Taj © 2026 · Software Developer · Bangalore</p>
+</footer>
+
+<script src="extras.js"></script>
+<script src="tracker.js"></script>
+</body>
+</html>
